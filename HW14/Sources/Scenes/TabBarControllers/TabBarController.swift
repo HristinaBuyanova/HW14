@@ -9,13 +9,11 @@ import UIKit
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         setupTabBarController()
         setupTabBarViewController()
-
     }
 
     private func setupTabBarController() {
@@ -36,12 +34,22 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let albumsIcon = UITabBarItem(title: "Альбомы", image: UIImage(systemName: "rectangle.stack.fill"), selectedImage: UIImage(systemName: "rectangle.stack.fill"))
         albumsVC.tabBarItem = albumsIcon
 
+
+
+
         let searchVC = SearchViewController()
-        let seachIcon = UITabBarItem(title: "", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
+        let seachIcon = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
         searchVC.tabBarItem = seachIcon
 
-        let contrillers = [mediaLibraryVC, forYouVC, albumsVC, searchVC]
-        self.setViewControllers(contrillers, animated: true)
+        let mediaLibraryNC = UINavigationController(rootViewController: mediaLibraryVC)
+        let forYouNC = UINavigationController(rootViewController: forYouVC)
+        let albumsNC = UINavigationController(rootViewController: albumsVC)
+        let searchNC = UINavigationController(rootViewController: searchVC)
+//        albumsNC.title = "Альбомы"
 
+        let contrillers = [mediaLibraryNC, forYouNC, albumsNC, searchNC]
+        self.setViewControllers(contrillers, animated: true)
     }
+
+    
 }

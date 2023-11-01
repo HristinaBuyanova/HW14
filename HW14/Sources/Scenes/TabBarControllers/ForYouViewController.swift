@@ -13,6 +13,4 @@ class ForYouViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
     }
-
-
 }

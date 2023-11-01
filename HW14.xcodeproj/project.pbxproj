@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1720D02AF03ACC003F73FD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1720CF2AF03ACC003F73FD /* Model.swift */; };
 		6EC4C54D2AEDA6860055FC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C54C2AEDA6860055FC13 /* AppDelegate.swift */; };
 		6EC4C54F2AEDA6860055FC13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C54E2AEDA6860055FC13 /* SceneDelegate.swift */; };
 		6EC4C5512AEDA6860055FC13 /* MediaLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C5502AEDA6860055FC13 /* MediaLibraryViewController.swift */; };
@@ -17,9 +18,11 @@
 		6EC4C5682AEDC7840055FC13 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C5672AEDC7840055FC13 /* ForYouViewController.swift */; };
 		6EC4C56A2AEDC79B0055FC13 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C5692AEDC79B0055FC13 /* AlbumsViewController.swift */; };
 		6EC4C56C2AEDC7AB0055FC13 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C56B2AEDC7AB0055FC13 /* SearchViewController.swift */; };
+		6EC4C56E2AEEDC440055FC13 /* MyAlbumsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC4C56D2AEEDC440055FC13 /* MyAlbumsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1720CF2AF03ACC003F73FD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6EC4C5492AEDA6860055FC13 /* HW14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC4C54C2AEDA6860055FC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC4C54E2AEDA6860055FC13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		6EC4C5672AEDC7840055FC13 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		6EC4C5692AEDC79B0055FC13 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		6EC4C56B2AEDC7AB0055FC13 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6EC4C56D2AEEDC440055FC13 /* MyAlbumsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		6EC4C5632AEDA7D60055FC13 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6EC4C56F2AEEDCF30055FC13 /* Cells */,
 				6EC4C5642AEDC6130055FC13 /* TabBarControllers */,
 			);
 			path = Scenes;
@@ -117,6 +122,15 @@
 				6EC4C56B2AEDC7AB0055FC13 /* SearchViewController.swift */,
 			);
 			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		6EC4C56F2AEEDCF30055FC13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6EC4C56D2AEEDC440055FC13 /* MyAlbumsCell.swift */,
+				6E1720CF2AF03ACC003F73FD /* Model.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1720D02AF03ACC003F73FD /* Model.swift in Sources */,
 				6EC4C5512AEDA6860055FC13 /* MediaLibraryViewController.swift in Sources */,
 				6EC4C56C2AEDC7AB0055FC13 /* SearchViewController.swift in Sources */,
+				6EC4C56E2AEEDC440055FC13 /* MyAlbumsCell.swift in Sources */,
 				6EC4C5662AEDC67F0055FC13 /* TabBarController.swift in Sources */,
 				6EC4C56A2AEDC79B0055FC13 /* AlbumsViewController.swift in Sources */,
 				6EC4C54D2AEDA6860055FC13 /* AppDelegate.swift in Sources */,
@@ -356,6 +372,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,9 +380,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MDF.HW14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -384,6 +404,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,9 +412,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MDF.HW14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

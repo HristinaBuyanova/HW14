@@ -13,7 +13,5 @@ class MediaLibraryViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
-
-
 }
 

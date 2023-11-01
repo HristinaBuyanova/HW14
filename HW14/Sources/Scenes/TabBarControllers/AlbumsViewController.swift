@@ -95,40 +95,21 @@ class AlbumsViewController: UIViewController {
                 return sectionLayout
 
             case .peopleAndPlace:
-
-                let trailingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+                let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1/2),
-                    heightDimension: .fractionalHeight(1)))
-
-                let leadingItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1/4),
-                    heightDimension: .fractionalHeight(1/2)))
-                trailingItem.contentInsets = NSDirectionalEdgeInsets(
-                    top: 50,
-                    leading: 5,
-                    bottom: 5,
-                    trailing: 5)
-                leadingItem.contentInsets = NSDirectionalEdgeInsets(
-                    top: 5,
-                    leading: 5,
-                    bottom: 5,
-                    trailing: 5)
-
-                let leadingGroupFirst = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1/4),
-                    heightDimension: .fractionalHeight(1)),
-                                                                      repeatingSubitem: leadingItem,
-                                                                      count: 2)
-                let leadingGroupSecond = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
-                    widthDimension: .fractionalWidth(1/4),
-                    heightDimension: .fractionalHeight(1)),
-                                                                      repeatingSubitem: leadingItem,
-                                                                      count: 2)
-                let allGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(
+                    heightDimension: .fractionalWidth(1)))
+                item.contentInsets = NSDirectionalEdgeInsets(
+                    top: 2.5,
+                    leading: 2.5,
+                    bottom: 2.5,
+                    trailing: 2.5)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .estimated(250)),
-                                                                  subitems: [leadingGroupFirst, leadingGroupSecond, trailingItem])
-                let section = NSCollectionLayoutSection(group: allGroup)
+                    heightDimension: .absolute(230)),
+                                                               repeatingSubitem: item,
+                                                               count: 2)
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .groupPaging
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.93),
                     heightDimension: .estimated(30))
@@ -137,7 +118,7 @@ class AlbumsViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 section.boundarySupplementaryItems = [layoutSectionHeader]
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
                 return section
 
            

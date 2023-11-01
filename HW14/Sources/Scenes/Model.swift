@@ -42,10 +42,7 @@ extension Model {
              Model(image: "15", title: "Альбом 13" , countTitle: "10 000", typeSection: .myAlbums),
              Model(image: "16", title: "Альбом 14" , countTitle: "12", typeSection: .myAlbums)],
 
-            [Model(image: "c1", typeSection: .peopleAndPlace),
-             Model(image: "c2", typeSection: .peopleAndPlace),
-             Model(image: "c3", title: "Люди", countTitle: "12", typeSection: .peopleAndPlace),
-             Model(image: "c4", typeSection: .peopleAndPlace),
+            [Model(image: "collage", title: "Щеночки", countTitle: "12", typeSection: .peopleAndPlace),
              Model(image: "карта", title: "Места", countTitle: "82", typeSection: .peopleAndPlace),],
 
             [Model(image: "video", title: "Видео", countTitle: "12", typeSection: .typeMedua),

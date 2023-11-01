@@ -50,6 +50,4 @@ class HeaderCell: UICollectionReusableView {
         super.prepareForReuse()
         label.text = nil
     }
-
-
 }

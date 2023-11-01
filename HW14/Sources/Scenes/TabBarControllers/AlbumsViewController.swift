@@ -33,7 +33,6 @@ class AlbumsViewController: UIViewController {
         setupView()
         setupHierarchy()
         setupLayout()
-
     }
 
     //    MARK: - Setup
@@ -69,12 +68,18 @@ class AlbumsViewController: UIViewController {
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .fractionalWidth(1))
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 2.5, leading: 2.5, bottom: 2.5, trailing: 2.5)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(
+                    top: 2.5,
+                    leading: 2.5,
+                    bottom: 2.5,
+                    trailing: 2.5)
                 let groupSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1/2),
                     heightDimension: .estimated(400))
-
-                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: layoutItem, count: 2)
+                let layoutGroup = NSCollectionLayoutGroup.vertical(
+                    layoutSize: groupSize,
+                    repeatingSubitem: layoutItem,
+                    count: 2)
                 layoutGroup.interItemSpacing = NSCollectionLayoutSpacing.fixed(45)
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(
                     top: 5,
@@ -91,7 +96,11 @@ class AlbumsViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 sectionLayout.boundarySupplementaryItems = [layoutSectionHeader]
-                sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0)
+                sectionLayout.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 40,
+                    trailing: 0)
                 return sectionLayout
 
             case .peopleAndPlace:
@@ -118,9 +127,12 @@ class AlbumsViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 section.boundarySupplementaryItems = [layoutSectionHeader]
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
+                section.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 20,
+                    trailing: 0)
                 return section
-
            
             case .typeMedua:
                 let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
@@ -133,7 +145,8 @@ class AlbumsViewController: UIViewController {
                     trailing: 2)
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .estimated(40)), subitems: [item])
+                    heightDimension: .estimated(40)), 
+                                                             subitems: [item])
                 group.contentInsets = NSDirectionalEdgeInsets(
                     top: 5,
                     leading: 0,
@@ -148,8 +161,11 @@ class AlbumsViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 section.boundarySupplementaryItems = [layoutSectionHeader]
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0)
-
+                section.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 40,
+                    trailing: 0)
                 return section
 
             case .other:
@@ -180,13 +196,12 @@ class AlbumsViewController: UIViewController {
                 section.boundarySupplementaryItems = [layoutSectionHeader]
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0)
                 return section
-
             }
         }
-
     }
 }
 
+// MARK: - Extension
 
 extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -247,9 +262,6 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
             header.label.text = "Другое"
             return header
         }
-
     }
-
-
 }
 

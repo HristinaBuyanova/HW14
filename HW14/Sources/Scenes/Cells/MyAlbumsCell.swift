@@ -11,7 +11,6 @@ class MyAlbumsCell: UICollectionViewCell {
 
     static let identifier = "albumsCell"
 
-
 //    MARK: - Outlets
 
     lazy var photo: UIImageView = {
@@ -43,14 +42,12 @@ class MyAlbumsCell: UICollectionViewCell {
         return label
     }()
 
-
 //    MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupHierarchy()
         setupLayout()
-
     }
 
     required init?(coder: NSCoder) {

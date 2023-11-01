@@ -8,10 +8,8 @@
 import UIKit
 
 class TypeMediaCell: UICollectionViewCell {
-    
 
     static let identifier = "typeMediaCell"
-
 
 //    MARK: - Outlets
 
@@ -30,8 +28,6 @@ class TypeMediaCell: UICollectionViewCell {
         return image
     }()
 
-
-
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20, weight: .bold)
@@ -49,7 +45,6 @@ class TypeMediaCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
 
 //    MARK: - Initializers
 

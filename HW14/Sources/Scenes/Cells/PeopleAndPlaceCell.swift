@@ -11,7 +11,6 @@ class PeopleAndPlaceCell: UICollectionViewCell {
 
     static let identifier = "peopleCell"
 
-
 //    MARK: - Outlets
 
     lazy var photo: UIImageView = {
@@ -37,14 +36,12 @@ class PeopleAndPlaceCell: UICollectionViewCell {
         return label
     }()
 
-
 //    MARK: - Initializers
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupHierarchy()
         setupLayout()
-
     }
 
     required init?(coder: NSCoder) {

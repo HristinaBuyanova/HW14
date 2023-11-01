@@ -34,9 +34,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let albumsIcon = UITabBarItem(title: "Альбомы", image: UIImage(systemName: "rectangle.stack.fill"), selectedImage: UIImage(systemName: "rectangle.stack.fill"))
         albumsVC.tabBarItem = albumsIcon
 
-
-
-
         let searchVC = SearchViewController()
         let seachIcon = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
         searchVC.tabBarItem = seachIcon
@@ -45,11 +42,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let forYouNC = UINavigationController(rootViewController: forYouVC)
         let albumsNC = UINavigationController(rootViewController: albumsVC)
         let searchNC = UINavigationController(rootViewController: searchVC)
-//        albumsNC.title = "Альбомы"
 
         let contrillers = [mediaLibraryNC, forYouNC, albumsNC, searchNC]
         self.setViewControllers(contrillers, animated: true)
     }
-
-    
 }

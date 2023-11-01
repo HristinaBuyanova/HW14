@@ -1,15 +1,15 @@
 //
-//  CollectionViewCell.swift
+//  PeopleAndPlaceCell.swift
 //  HW14
 //
-//  Created by Христина Буянова on 29.10.2023.
+//  Created by Христина Буянова on 01.11.2023.
 //
 
 import UIKit
 
-class MyAlbumsCell: UICollectionViewCell {
+class PeopleAndPlaceCell: UICollectionViewCell {
 
-    static let identifier = "albumsCell"
+    static let identifier = "peopleCell"
 
 
 //    MARK: - Outlets
@@ -17,13 +17,7 @@ class MyAlbumsCell: UICollectionViewCell {
     lazy var photo: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
-
-    lazy var heart: UIImageView = {
-        let image = UIImageView()
-        image.tintColor = .white
+        image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -63,24 +57,20 @@ class MyAlbumsCell: UICollectionViewCell {
         addSubview(photo)
         addSubview(nameAlbumLabel)
         addSubview(countPhotoLabel)
-        addSubview(heart)
     }
 
     private func setupLayout() {
         NSLayoutConstraint.activate([
             photo.leadingAnchor.constraint(equalTo: leadingAnchor),
             photo.topAnchor.constraint(equalTo: topAnchor),
-            photo.heightAnchor.constraint(equalToConstant: 180),
             photo.widthAnchor.constraint(equalToConstant: 180),
+            photo.heightAnchor.constraint(equalToConstant: 180),
 
             nameAlbumLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             nameAlbumLabel.topAnchor.constraint(equalTo: photo.bottomAnchor, constant: 5),
 
             countPhotoLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            countPhotoLabel.topAnchor.constraint(equalTo: nameAlbumLabel.bottomAnchor, constant: 5),
-
-            heart.bottomAnchor.constraint(equalTo: photo.bottomAnchor, constant: -10),
-            heart.leadingAnchor.constraint(equalTo: photo.leadingAnchor, constant: 10)
+            countPhotoLabel.topAnchor.constraint(equalTo: nameAlbumLabel.bottomAnchor, constant: 5)
         ])
     }
 
@@ -88,6 +78,6 @@ class MyAlbumsCell: UICollectionViewCell {
         self.nameAlbumLabel.text = model.title
         self.countPhotoLabel.text = model.countTitle
         self.photo.image = UIImage(named: model.image)
-        self.heart.image = UIImage(systemName: model.heart ?? "")
     }
 }
+

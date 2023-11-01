@@ -16,6 +16,7 @@ class HeaderCell: UICollectionReusableView {
     lazy var label: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
